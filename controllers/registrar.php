@@ -1,5 +1,5 @@
 <?php 
-include("con_db.php");
+include("conec/con_db.php");
 
 if (isset($_POST['register'])) {
     if (strlen($_POST['nombre']) >= 1 && strlen($_POST['apellido']) >= 1) {

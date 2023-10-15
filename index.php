@@ -1,20 +1,28 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Login</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="estilo.css">
-</head>
-<body>
-    <form method="post">
-    	<h1>Login</h1>
-    	<input type="text" name="correo" placeholder="Correo">
-		<input type="text" name="pass" placeholder="Password">
-        <input type="submit" name="register" value="Iniciar Sesion">
-		<br>
-		<br>
-        <label>Registro de usuario <a href="registro.php">Click Aqui!</a></label>
-    </form>
+<?php
 
-</body>
-</html>
+
+require("controllers/controlador.php");
+
+//Instancio el controlador
+$controller = new Controller;
+
+//Decido la ruta en función de los elementos del array
+if (isset($_GET['op'])){
+
+    $opcion=$_GET['op'];
+
+    if ($opcion=="crear")
+    {
+    //Llamo al método ver pasándole la clave que me están pidiendo
+    $controller->registro();
+    }
+
+    if ($opcion == "login"){
+        $controller->index();
+    }
+}
+else{
+
+    //Llamo al método por defecto del controlador
+    $controller->index();
+}

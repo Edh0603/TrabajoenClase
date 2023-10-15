@@ -3,7 +3,7 @@
 <head>
 	<title>Registrar usuario</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="public/css/estilo.css">
 </head>
 <body>
     <form method="post">
@@ -16,7 +16,7 @@
     	<input type="submit" name="register" value="Registrar">
 		<br>
         <br>
-        <label >Para regresar al login <a href="index.php">Click Aqui!</a></label>
+        <label >Para regresar al login <a href="?op=login">Click Aqui!</a></label>
     </form>
     
 	<h3>Edson Hervey |	8-992-1483 	 |	1LS131</h3>
