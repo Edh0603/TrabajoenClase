@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
- include("controlador.php")
+ include("../controllers/controlador.php")
 ?>
 <html lang="en">
 <head>

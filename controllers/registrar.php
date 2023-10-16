@@ -7,8 +7,8 @@ if (isset($_POST['register'])) {
 	    $name = trim($_POST['nombre']);
 		$apellido = trim($_POST['apellido']);
 		$correo = trim($_POST['correo']);
-		$password = trim($_POST['pass']);
-		$passwordr = trim($_POST['passr']);
+		$password =  base64_encode(trim($_POST['pass']));
+		$passwordr = base64_encode(trim($_POST['passr']));
 		$consulta = "INSERT INTO user(nombre, apellido, correo, pass) VALUES ('$name','$apellido','$correo', '$password')";
 	    $resultado = mysqli_query($conex,$consulta);
 		if ($resultado){

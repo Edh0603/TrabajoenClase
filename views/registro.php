@@ -10,9 +10,9 @@
     	<h1>Formulario del Registro</h1>
     	<input type="text" name="nombre" placeholder="Nombre">
 		<input type="text" name="apellido" placeholder="Apellido">
-		<input type="text" name="correo" placeholder="Correo">
-		<input type="text" name="pass" placeholder="Password">
-		<input type="text" name="passr" placeholder="Repetir Password">
+		<input type="email" name="correo" placeholder="Correo">
+		<input type="password" name="pass" placeholder="Password">
+		<input type="password" name="passr" placeholder="Repetir Password">
     	<input type="submit" name="register" value="Registrar">
 		<br>
         <br>
@@ -21,7 +21,7 @@
     
 	<h3>Edson Hervey |	8-992-1483 	 |	1LS131</h3>
         <?php 
-        include("registrar.php");
+        include("<controllers/registrar.php");
         ?>
 </body>
 </html>

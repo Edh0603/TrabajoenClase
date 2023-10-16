@@ -16,6 +16,10 @@ class Controller
 
     }
 
+    public static function login(){
+        require("views/inicio.php");
+    }
+
 }
 
 

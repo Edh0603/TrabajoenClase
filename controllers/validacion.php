@@ -8,15 +8,19 @@ if(!empty($_POST["register"])) {
         <?php
     } else {
         $correo = $_POST["correo"];
-        $clave = $_POST["pass"];
-        $sql = $conex->query("select * from user where correo='$correo' and pass='$clave'");
-        if($datos=$sql->fetch_object()) {
-            header("Location:inicio.php");
-        }else {
-            ?> 
-	    	<h3 class="bad">ACCESO DENEGADO</h3>
-           <?php
-        } 
+        $clave = base64_encode($_POST["pass"]);
+        $sql = $conex->query("select * from user where correo='$correo'");
+        if($sql->num_rows>0){
+            while($row = $sql->fetch_assoc()){
+            if($row['pass'] == ($clave)){
+                setcookie('id',$row['id'], time() + (86400 * 30), "/");
+                header("refresh:1;url=views/inicio.php");
+            }}
+            }else {
+                ?> 
+	        	<h3 class="bad">ACCESO DENEGADO</h3>
+               <?php
+            } 
     }
     
 }

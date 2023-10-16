@@ -8,8 +8,8 @@
 <body>
     <form method="post">
     	<h1>Login</h1>
-    	<input type="text" name="correo" placeholder="Correo">
-		<input type="text" name="pass" placeholder="Password">
+    	<input type="email" name="correo" placeholder="Correo">
+		<input type="password" name="pass" placeholder="Password">
         <input type="submit" name="register" value="Iniciar Sesion">
 		<br>
 		<br>
